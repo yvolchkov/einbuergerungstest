@@ -6,7 +6,7 @@ import genanki
 from pathlib import Path
 from db import conn
 import textwrap
-
+from datetime import datetime
 
 def write_anki():
     outdir = Path("anki")
@@ -135,7 +135,12 @@ def write_anki():
     # Save the Anki package
     package = genanki.Package(deck)
     package.media_files = [str(f) for f in imagedir.iterdir()]
-    package.write_to_file(outdir / "einbuergerung_quiz.apkg")
+
+    # Get the current date
+    current_date = datetime.now()
+    current_date = current_date.strftime("%Y-%m-%d")
+    
+    package.write_to_file(outdir / f"einbuergerung-quiz-{current_date}.apkg")
 
     print("Anki package created successfully.")
 
