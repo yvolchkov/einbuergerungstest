@@ -128,6 +128,7 @@ def write_anki():
                 correct_classes[2],
                 correct_classes[3],
             ],
+            tags=[f"Einbürgerung-{bundesland}"],
         )
         deck.add_note(note)
 
