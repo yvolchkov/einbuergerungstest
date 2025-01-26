@@ -1,31 +1,30 @@
 # Anki Deck für den deutschen Einbürgerungstest (alle Bundesländer)
 
-Dieses Skript scrapt die Fragen und Antworten für den deutschen Einbürgerungstest von http://oet.bamf.de/ .
-Sie werden in einer Sqlite3 Datenbank gespeichert und dann exportiert, um mit Anki zu nutzen.
+Dieses Skript scrapt die Fragen und Antworten für den deutschen Einbürgerungstest von http://oet.bamf.de/.
+Die Daten werden in einer SQLite3-Datenbank gespeichert und anschließend exportiert, um sie mit Anki zu nutzen
 
-* [Finale Anki Deck in Ankiweb](https://ankiweb.net/shared/info/1428016787)
+- [Finales Anki-Deck auf AnkiWeb](https://ankiweb.net/shared/info/1428016787)
+- [Finales Anki-Deck als .apkg herunterladen](https://github.com/ignamv/einbuergerungstest/releases)
 
-* [Finale Anki Deck als .apkg herunterladen](https://github.com/ignamv/einbuergerungstest/releases)
-
-## Usage
+## Nutzung
 
 ### Scraper
 
-Install the requirements (just selenium at the moment)
+Installiere die benötigten Abhängigkeiten (aktuell nur Selenium):
 
 ```
 pip install -r requirements.txt
 ```
 
-Download [geckodriver](https://github.com/mozilla/geckodriver/releases)
-and run this script with its directory in the PATH, e.g.
+Lade den [Geckodriver](https://github.com/mozilla/geckodriver/releases) herunter und führe das Skript
+aus, wobei das Geckodriver-Verzeichnis im PATH enthalten sein muss, z. B.:
 
 ```
 env PATH=$HOME/Downloads:$PATH python3 scrape.py
 ```
 
-If you get an error in Ubuntu about your profile not being accessible,
-try setting a TMPDIR:
+Wenn du unter Ubuntu einen Fehler über ein nicht zugängliches Profil erhältst,
+versuche, ein temporäres Verzeichnis (TMPDIR) festzulegen:
 
 ```
 mkdir tmp
@@ -34,12 +33,11 @@ env PATH=$HOME/Downloads:$PATH TMPDIR=./tmp python3 scrape.py
 
 ### Anki writer
 
-This will generate a csv file and a directory with the question images.
-
+Dieses Skript generiert eine CSV-Datei und ein Verzeichnis mit den Bildfragen:
 ```
 python3 output.py
 ```
 
-## Acknowledgements
+## Danksagungen
 
-Thanks to @nikste and @prepor for their contributions!
+Vielen Dank an @nikste und @prepor für ihre Beiträge!
