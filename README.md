@@ -9,6 +9,10 @@ Die Daten werden in einer SQLite3-Datenbank gespeichert und anschließend export
 Im generierten Deck sind alle Notizen entsprechend den Bundesländern gekennzeichnet. Dadurch kannst
 du leicht nur die Notizen filtern, die für dich relevant sind.
 
+## Note Beispiel
+![image](img/example-front.jpg)
+![image](img/example-back.jpg)
+
 # Nutzung
 Verwende eine der folgenden Optionen:
 
